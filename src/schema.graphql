@@ -1,0 +1,14 @@
+type Post {
+  id: String!,
+  title: String!,
+  body: String!,
+  user_id: Int,
+}
+type Query {
+  hello(name: String): String!,
+  posts: [Post!]!,
+  post(id: String): Post
+}
+type Mutation {
+  addPost(title: String!,body: String!,user_id: Int): Post!,
+}
